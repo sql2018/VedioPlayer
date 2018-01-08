@@ -1,0 +1,53 @@
+﻿<Window x:Class="VideoPlayer.About"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="关于播放器" Name="AboutWin" WindowStyle="ToolWindow" Icon="Images\VP.bmp" Height="200" Width="300" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStartupLocation="CenterScreen" Background="#FFC2D9F7">
+    <Grid Width="Auto" Name="GridAbout">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="5"/>
+        </Grid.RowDefinitions>
+
+        <Grid Width="Auto" Name="GridAbove" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="15"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="15"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Name="left" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid Name="aboutImg" Grid.Row="1">
+                    <Image x:Name="ImgPre" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Images\VP.bmp"/>
+                </Grid>
+            </Grid>
+
+            <Grid Height="Auto" Name="right" Grid.Column="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="15"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="25"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="1" FontSize="13" Content="开发人：///SQL"/>
+                <Label Grid.Row="2" FontSize="13" Content="开发时间：2017.12"/>
+                <Label Grid.Row="3" FontSize="13">开发架构：.NET Framework 4.61</Label>
+                <Label Grid.Row="4" FontSize="13">开发技术：WPF</Label>
+            </Grid>
+        </Grid>
+
+        <Grid Width="Auto" Name="GridBelow" Grid.Row="1">
+            <Button Name="btnOK" Grid.Row="5" Width="58" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" PreviewMouseLeftButtonDown="btnOK_PreviewMouseLeftButtonDown">
+                确 定
+            </Button>
+        </Grid>
+    </Grid>
+</Window>
