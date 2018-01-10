@@ -25,7 +25,6 @@ using System.Runtime.InteropServices;
 using System.Diagnostics;
 namespace VideoPlayer
 {
-   
     /// <summary>
     /// 播放器的声音状态
     /// </summary>
@@ -1921,7 +1920,6 @@ namespace VideoPlayer
                 ModePlayTag = element["Change"].InnerText;
             }
         }
-
         /// <summary>
         /// 读取声音大小信息
         /// </summary>

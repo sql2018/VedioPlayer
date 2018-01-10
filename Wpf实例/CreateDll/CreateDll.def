@@ -1,0 +1,4 @@
+LIBRARY "CreateDll"
+EXPORTS
+test01 @ 1
+test01 @ 2
