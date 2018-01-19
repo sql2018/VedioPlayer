@@ -13,6 +13,7 @@ using VideoPlayer.Class;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
 using System.Windows.Forms;
+using System.Timers;
 
 namespace VideoPlayer.Class
 {
@@ -20,7 +21,8 @@ namespace VideoPlayer.Class
      /// 自定义公共类
      /// </summary>
      public  class  UserControlClass
-    { 
+    {
+       
         /// <summary>
         /// 登录的用户名
         /// </summary>
@@ -45,6 +47,7 @@ namespace VideoPlayer.Class
         /// 当前播放文件名
         /// </summary>
         public static string FileName;
+
         /// <summary>
         /// 得到程序集debug里面的images里面所有的图片名称
         /// </summary>
@@ -156,5 +159,5 @@ namespace VideoPlayer.Class
             HKCU.Close();
         }
 
-    }
 }
+ }

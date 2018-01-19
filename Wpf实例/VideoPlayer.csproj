@@ -151,6 +151,9 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\JoyStick.cs" />
+    <Compile Include="ShowChange.xaml.cs">
+      <DependentUpon>ShowChange.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserLogin.xaml.cs">
       <DependentUpon>UserLogin.xaml</DependentUpon>
     </Compile>
@@ -210,6 +213,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShowChange.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

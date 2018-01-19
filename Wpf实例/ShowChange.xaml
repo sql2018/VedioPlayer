@@ -1,0 +1,54 @@
+﻿<Window x:Class="VideoPlayer.ShowChange"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VideoPlayer"
+        mc:Ignorable="d"
+        Title="ShowChange" Height="600" Width="692">
+    <Grid Margin="0,0,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="88*"/>
+            <ColumnDefinition Width="88*"/>
+            <ColumnDefinition Width="88*"/>
+            <ColumnDefinition Width="88*"/>
+            <ColumnDefinition Width="88*"/>
+            <ColumnDefinition Width="88*"/>
+            <ColumnDefinition Width="88*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="200*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="lab_one" Content="9座二自由度:" HorizontalAlignment="Left" Margin="10,24,0,0" VerticalAlignment="Top" Width="90" Height="26"/>
+        <TextBox x:Name="lab_one_Box1" Grid.Column="1"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="73"/>
+        <TextBox x:Name="lab_one_Box2" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="73"/>
+        
+        <Label x:Name="lab_two" Grid.Row="1" Content="普通二自由度:" HorizontalAlignment="Left" Margin="10,24,0,0" VerticalAlignment="Top" Width="90" Height="26"/>
+        <TextBox x:Name="lab_two_Box1" Grid.Row="1" Grid.Column="1"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="73"/>
+        <TextBox x:Name="lab_two_Box2" Grid.Row="1" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="73"/>
+        
+        <Label x:Name="lab_three" Grid.Row="2" Content="普通三自由度:" HorizontalAlignment="Left" Margin="10,24,0,0" VerticalAlignment="Top" Width="90" Height="26"/>
+        <TextBox x:Name="lab_three_Box1" Grid.Row="2" Grid.Column="1"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="73"/>
+        <TextBox x:Name="lab_three_Box2" Grid.Row="2" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="73"/>
+        <TextBox x:Name="lab_three_Box3" Grid.Row="2" Grid.Column="3"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="73"/>
+
+        <Label x:Name="lab_four" Grid.Row="3" Content="摆杆三自由度:" HorizontalAlignment="Left" Margin="10,24,0,0" VerticalAlignment="Top" Width="90" Height="26"/>
+        <TextBox x:Name="lab_four_Box1" Grid.Row="3" Grid.Column="1"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="73"/>
+        <TextBox x:Name="lab_four_Box2" Grid.Row="3" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="73"/>
+        <TextBox x:Name="lab_four_Box3" Grid.Row="3" Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="73"/>
+
+        <Label x:Name="lab_five" Grid.Row="4" Content="普通六自由度:" HorizontalAlignment="Left" Margin="10,24,0,0" VerticalAlignment="Top" Width="90" Height="26"/>
+        <TextBox x:Name="lab_five_Box1" Grid.Row="4" Grid.Column="1"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="73"/>
+        <TextBox x:Name="lab_five_Box2" Grid.Row="4" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="73"/>
+        <TextBox x:Name="lab_five_Box3" Grid.Row="4" Grid.Column="3"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="73"/>
+        <TextBox x:Name="lab_five_Box4" Grid.Row="4" Grid.Column="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="73"/>
+        <TextBox x:Name="lab_five_Box5" Grid.Row="4" Grid.Column="5"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="73"/>
+        <TextBox x:Name="lab_five_Box6" Grid.Row="4" Grid.Column="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="73"/>
+
+    </Grid>
+</Window>
