@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VideoPlayer"
         mc:Ignorable="d"
-        Title="ShowChange" Height="600" Width="692">
+        Title="ShowChange" Height="600" Width="772">
     <Grid Margin="0,0,0,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="88*"/>
@@ -27,11 +27,11 @@
         <Label x:Name="lab_one" Content="9座二自由度:" HorizontalAlignment="Left" Margin="10,24,0,0" VerticalAlignment="Top" Width="90" Height="26"/>
         <TextBox x:Name="lab_one_Box1" Grid.Column="1"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="73"/>
         <TextBox x:Name="lab_one_Box2" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="73"/>
-        
+
         <Label x:Name="lab_two" Grid.Row="1" Content="普通二自由度:" HorizontalAlignment="Left" Margin="10,24,0,0" VerticalAlignment="Top" Width="90" Height="26"/>
         <TextBox x:Name="lab_two_Box1" Grid.Row="1" Grid.Column="1"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="73"/>
         <TextBox x:Name="lab_two_Box2" Grid.Row="1" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="73"/>
-        
+
         <Label x:Name="lab_three" Grid.Row="2" Content="普通三自由度:" HorizontalAlignment="Left" Margin="10,24,0,0" VerticalAlignment="Top" Width="90" Height="26"/>
         <TextBox x:Name="lab_three_Box1" Grid.Row="2" Grid.Column="1"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="73"/>
         <TextBox x:Name="lab_three_Box2" Grid.Row="2" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="73"/>
@@ -50,5 +50,66 @@
         <TextBox x:Name="lab_five_Box5" Grid.Row="4" Grid.Column="5"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="73"/>
         <TextBox x:Name="lab_five_Box6" Grid.Row="4" Grid.Column="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="73"/>
 
+        <StackPanel Grid.Row="5" Grid.ColumnSpan="7" >
+
+            <!--<ListBox x:Name="list" Height="46" Margin="128,0,128,0" BorderThickness="0" >
+               
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                
+                <ListBoxItem>
+                    <CheckBox Content="1" IsHitTestVisible="False"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox Content="2" IsHitTestVisible="False"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox Content="3" IsHitTestVisible="False"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox Content="4" IsHitTestVisible="False"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox Content="5" IsHitTestVisible="False"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox Content="6" IsHitTestVisible="False"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox Content="7" IsHitTestVisible="False"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox Content="8" IsHitTestVisible="False"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox Content="9" IsHitTestVisible="False"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox Content="10" IsHitTestVisible="False"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox Content="11" IsHitTestVisible="False"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox Content="12" IsHitTestVisible="False"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox Content="13" IsHitTestVisible="False"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox Content="14" IsHitTestVisible="False"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox Content="15" IsHitTestVisible="False"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox Content="16" IsHitTestVisible="False"/>
+                </ListBoxItem>
+            </ListBox>-->
+        
+        </StackPanel>
     </Grid>
 </Window>

@@ -32,20 +32,21 @@ namespace VideoPlayer
             if (principal.IsInRole(System.Security.Principal.WindowsBuiltInRole.Administrator))
             {
                 //如果是管理员，则直接运行
+                
                 //Player py = new Player();
                 //py.Show();
-                
                 //VedioPlayer.Form1 form = new VedioPlayer.Form1();
                 //form.Show();
-                //UseDll();
-                //ShowChange sc = new ShowChange();
-                //sc.Show();
+                ShowChange sc = new ShowChange();
+                sc.Show();
+                //启动一个线程来实时更新摇杆所反馈的数据 
                 System.Timers.Timer timer = new System.Timers.Timer();
                 timer.Enabled = true;
                 timer.Interval = 50;
                 //设置是否重复计时，如果该属性设为False,则只执行timer_Elapsed方法一次。
                 timer.AutoReset = true;
                 timer.Elapsed += new ElapsedEventHandler(timer_USBJOY_DLL);
+
             }
             else
             {
@@ -63,6 +64,7 @@ namespace VideoPlayer
                 System.Windows.Forms.Application.Exit();
             }
         }
+        #region 静态链接调用Dll文件
         //[DllImport(@"../../Release/CreateDLL.dll", EntryPoint = "test01", SetLastError = true, CharSet = CharSet.Ansi, ExactSpelling = false, CallingConvention = CallingConvention.StdCall)]
         //extern static byte test01(ref byte a, int b, int c);
         //[DllImport(@"../../Release/CreateDLL.dll", EntryPoint = "test02", SetLastError = true, CharSet = CharSet.Ansi, ExactSpelling = false, CallingConvention = CallingConvention.StdCall)]
@@ -77,8 +79,9 @@ namespace VideoPlayer
         //    Console.WriteLine("test02结果：" + r2.ToString());
         //    Console.ReadKey();
         //}
+        #endregion
         /// <summary>
-        /// 定时器处理的事件
+        /// 定时器处理的事件，实时更新DLL文件获取遥感所反馈的数据
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -86,16 +89,8 @@ namespace VideoPlayer
         {
              Console.Clear();
             //第一个参数为Dll包含方法的名称，第二个参数为Dll方法里面为数组的大小
-             USBJOY_DLL("SQ_GET_2DOF_9P", 4);
-            
-            //USBJOY_DLL("SQ_GET_2DOF", 2);
-            
-            // USBJOY_DLL("SQ_GET_3DOF", 3);
-            
-            // USBJOY_DLL("SQ_GET_3DOF_SWING_LINK", 3);
-            
-            //USBJOY_DLL("SQ_GET_6DOF", 6);
-            
+            //方法--九座二自由度
+            USBJOY_DLL("SQ_GET_2DOF_9P", 4); 
         }
         private void USBJOY_DLL(string funcname, int k)
         {
@@ -111,11 +106,9 @@ namespace VideoPlayer
             //4. 测试
             byte[] a = new byte[k];
             addFunction(ref a[0]);
-            //this.Dispatcher.Invoke(new Action(() =>{addFunction(ref a[0]);
-                for (int i=0;i<a.Length;i++) {
+            for (int i=0;i<a.Length;i++) {
                     Console.WriteLine(a[i]);
-                }
-            //}));
+            }
             //DllInvoke.FreeLibrary(hModule);
         }
     }
