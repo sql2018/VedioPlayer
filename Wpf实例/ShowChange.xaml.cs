@@ -50,7 +50,7 @@ namespace VideoPlayer
             //第一个参数为Dll包含方法的名称，第二个参数为Dll方法里面为数组的大小
             a=USBJOY_DLL("SQ_GET_2DOF_9P", 4);
             //MessageBox.Show(a[0].ToString()+"----"+a[1].ToString());
-            //this.Dispatcher.Invoke(new Action(() => {}));使用同步的方法来重复使用控件
+            //this.Dispatcher.Invoke(new Action(() => {}));使用同步的方法来重复给控的Text赋值
             if(a.Length > 0)
             {
                this.Dispatcher.Invoke(new Action(() => {
@@ -117,8 +117,9 @@ namespace VideoPlayer
             byte[] a = new byte[k];
             // this.Dispatcher.Invoke(new Action(() => {}));使用同步的方法来使用函数委托
             this.Dispatcher.Invoke(new Action(() => {addFunction(ref a[0]);}));
-            //DllInvoke.FreeLibrary(hModule);
+            //DllInvoke.FreeLibrary(hModule);//释放Dll文件
             return a;
         }
+
     }  
 }

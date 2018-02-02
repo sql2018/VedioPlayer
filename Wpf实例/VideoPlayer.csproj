@@ -140,6 +140,7 @@
     <Compile Include="Class\DllInvoke.cs" />
     <Compile Include="Class\Hook.cs" />
     <Compile Include="Class\KeyboardHookLib.cs" />
+    <Compile Include="Class\SerialPortCom.cs" />
     <Compile Include="Class\UserControlClass.cs" />
     <Compile Include="Class\Refresh.cs" />
     <Compile Include="Class\DoubleConverter.cs" />
