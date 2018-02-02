@@ -45,6 +45,7 @@ namespace VideoPlayer
                 //设置是否重复计时，如果该属性设为False,则只执行timer_Elapsed方法一次。
                 //timer.AutoReset = true;
                 //timer.Elapsed += new ElapsedEventHandler(timer_USBJOY_DLL);
+
             }
             else
             {
