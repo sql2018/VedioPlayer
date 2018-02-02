@@ -32,19 +32,19 @@ namespace VideoPlayer
             if (principal.IsInRole(System.Security.Principal.WindowsBuiltInRole.Administrator))
             {
                 //如果是管理员，则直接运行
-                //Player py = new Player();
-                //py.Show();
-                VedioPlayer.Form1 form = new VedioPlayer.Form1();
-                form.Show();
-                ShowChange sc = new ShowChange();
-                sc.Show();
+                Player py = new Player();
+                py.Show();
+                //VedioPlayer.Form1 form = new VedioPlayer.Form1();
+                //form.Show();
+                //ShowChange sc = new ShowChange();
+                //sc.Show();
                 //启动一个线程来实时更新摇杆所反馈的数据 
-                System.Timers.Timer timer = new System.Timers.Timer();
-                timer.Enabled = true;
-                timer.Interval = 50;
+                //System.Timers.Timer timer = new System.Timers.Timer();
+                //timer.Enabled = true;
+                //timer.Interval = 50;
                 //设置是否重复计时，如果该属性设为False,则只执行timer_Elapsed方法一次。
-                timer.AutoReset = true;
-                timer.Elapsed += new ElapsedEventHandler(timer_USBJOY_DLL);
+                //timer.AutoReset = true;
+                //timer.Elapsed += new ElapsedEventHandler(timer_USBJOY_DLL);
             }
             else
             {
