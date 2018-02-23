@@ -20,7 +20,6 @@ using System.Collections.Generic;
 using System.Windows.Interop;
 using Microsoft.Win32;
 using System.Configuration;
-using static VideoPlayer.Class.Hook;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
 namespace VideoPlayer
