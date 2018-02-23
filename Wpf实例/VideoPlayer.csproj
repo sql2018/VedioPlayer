@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>VideoPlayer</RootNamespace>
     <AssemblyName>VideoPlayer</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -69,33 +69,25 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AxInterop.ShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>F:\程序\新建文件夹\AxInterop.ShockwaveFlashObjects.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
+      <HintPath>UseThings\AxInterop.ShockwaveFlashObjects.dll</HintPath>
     </Reference>
     <Reference Include="DevComponents.WpfRibbon, Version=5.9.0.10, Culture=neutral, PublicKeyToken=2037e151916410e7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>F:\程序\新建文件夹\DevComponents.WpfRibbon.dll</HintPath>
+      <HintPath>UseThings\DevComponents.WpfRibbon.dll</HintPath>
     </Reference>
     <Reference Include="Interop.ShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>F:\程序\新建文件夹\Interop.ShockwaveFlashObjects.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>UseThings\Interop.ShockwaveFlashObjects.dll</HintPath>
     </Reference>
     <Reference Include="MessageObject, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>F:\程序\新建文件夹\MessageObject.dll</HintPath>
+      <HintPath>UseThings\MessageObject.dll</HintPath>
     </Reference>
     <Reference Include="Pscsff, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>F:\程序\新建文件夹\Pscsff.dll</HintPath>
-    </Reference>
-    <Reference Include="SharpDX, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
-      <HintPath>packages\SharpDX.4.0.1\lib\net45\SharpDX.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="SharpDX.DirectInput, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
-      <HintPath>packages\SharpDX.DirectInput.4.0.1\lib\net45\SharpDX.DirectInput.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>UseThings\Pscsff.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -119,11 +111,11 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="WindowsFormsIntegration_X86, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\WindowsFormsIntegration_X86.dll</HintPath>
+      <HintPath>UseThings\WindowsFormsIntegration_X86.dll</HintPath>
     </Reference>
     <Reference Include="WpfCap, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>F:\程序\新建文件夹\WpfCap.dll</HintPath>
+      <HintPath>UseThings\WpfCap.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -143,7 +135,6 @@
     <Compile Include="Class\Refresh.cs" />
     <Compile Include="Class\DoubleConverter.cs" />
     <Compile Include="Class\ImageInfo.cs" />
-    <Compile Include="Class\JoyStick.cs" />
     <Compile Include="ShowChange.xaml.cs">
       <DependentUpon>ShowChange.xaml</DependentUpon>
     </Compile>

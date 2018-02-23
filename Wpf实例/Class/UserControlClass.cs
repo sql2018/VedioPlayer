@@ -53,7 +53,7 @@ namespace VideoPlayer.Class
         /// </summary>
         /// <returns></returns>
         public static List<string> Getimages(){
-            DirectoryInfo path = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory.ToString() + "images");
+            DirectoryInfo path = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory.Substring(0, AppDomain.CurrentDomain.BaseDirectory.Length - 11) + @"\UseThings\" + "images");
             FileInfo[] files = path.GetFiles();
             //"*.jpg|*.jpeg|*.png|*.bmp|*.gif,*.ico"
             List<string> lists = new List<string>();
@@ -74,7 +74,7 @@ namespace VideoPlayer.Class
         /// <param name=""></param>
         public static void Addimage(ObservableCollection<ImageInfo> data,string imagepath) {
                 FileInfo picFile = new FileInfo(imagepath);
-                string dest = Path.Combine(AppDomain.CurrentDomain.BaseDirectory.ToString(), "images\\" + Path.GetFileName(imagepath));
+                string dest = Path.Combine(AppDomain.CurrentDomain.BaseDirectory.Substring(0, AppDomain.CurrentDomain.BaseDirectory.Length - 11) + @"\UseThings\", "images\\" + Path.GetFileName(imagepath));
                 //复制文件到指定目录下（1）为当前路径（2）为指定路径
                 if (UserControlClass.Getimages().Contains(Path.GetFileName(imagepath)))
                 {
@@ -97,7 +97,7 @@ namespace VideoPlayer.Class
         {
             if (data!=null) {
                 //获取程序所在目录中的images文件夹
-                DirectoryInfo di = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + "images");
+                DirectoryInfo di = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory.Substring(0, AppDomain.CurrentDomain.BaseDirectory.Length - 11) + @"\UseThings\" + "images");
                 //添加此目录中的图片文件到data中
                 foreach (var file in di.GetFiles())
                 {

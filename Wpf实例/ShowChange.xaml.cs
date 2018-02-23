@@ -21,10 +21,10 @@ namespace VideoPlayer
     /// </summary>
     public partial class ShowChange : Window
     {
-        byte[] a = new byte[2];
-        byte[] b = new byte[2];
-        byte[] c = new byte[3];
-        byte[] d = new byte[3];
+        byte[] a = new byte[4];
+        byte[] b = new byte[4];
+        byte[] c = new byte[4];
+        byte[] d = new byte[4];
         byte[] f = new byte[6];
         public ShowChange()
         {
@@ -97,6 +97,7 @@ namespace VideoPlayer
                 }));
             }
         }
+
         /// <summary>
         /// 动态调用Dll以及DLL里面的方法
         /// </summary>
@@ -119,6 +120,16 @@ namespace VideoPlayer
             this.Dispatcher.Invoke(new Action(() => {addFunction(ref a[0]);}));
             //DllInvoke.FreeLibrary(hModule);//释放Dll文件
             return a;
+        }
+
+        /// <summary>
+        /// 窗口关闭
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
         }
 
     }  

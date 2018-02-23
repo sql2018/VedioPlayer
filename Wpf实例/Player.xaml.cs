@@ -539,7 +539,6 @@ namespace VideoPlayer
         /// <param name="e"></param>
         private void ImgStop_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
             if (e.LeftButton == MouseButtonState.Pressed)
             {
                 if (!string.IsNullOrEmpty(UserControlClass.FileName))
@@ -596,7 +595,6 @@ namespace VideoPlayer
             {
                 if (e.LeftButton == MouseButtonState.Pressed)
                 {
-
                     NextPlayer();
                     //SavePlayTime();
                     PlayNextPre();
@@ -2484,7 +2482,7 @@ namespace VideoPlayer
         /// <summary>
         /// 初始位置为设置第一个屏的正中间位置
         /// </summary>
-        private void Currentjug() {
+        private void Currentjug(){
             System.Windows.Forms.Screen[] sc;
             sc = System.Windows.Forms.Screen.AllScreens;
             if (sc.Length > 1)
@@ -2787,7 +2785,7 @@ namespace VideoPlayer
             if (system == null)
             {
                  system = currentUser.CreateSubKey(@"Software\Microsoft\Windows\CurrentVersion\Policies\System");
-             }
+            }
              system.SetValue("DisableTaskmgr", arg, RegistryValueKind.DWord);
              currentUser.Close();
          }

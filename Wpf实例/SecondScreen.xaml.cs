@@ -116,8 +116,8 @@ namespace VideoPlayer
         {
             if (e.Key == Key.Escape)//Esc键  
             {
-               // UserControlClass.MSStatus = MediaStatus.Pause;
-               //UserControlClass.MPPlayer.Pause();
+                UserControlClass.MSStatus = MediaStatus.Pause;
+                UserControlClass.MPPlayer.Pause();
                 this.WindowState = WindowState.Minimized;
                 Player.Activate();
                 Player.WindowState = WindowState.Normal;
@@ -176,7 +176,6 @@ namespace VideoPlayer
                 Player.ListView.SelectedValue = UserControlClass.FileName;  
             }
         }
-
 
     }
 } 

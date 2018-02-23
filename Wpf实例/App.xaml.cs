@@ -10,6 +10,7 @@ using VideoPlayer.Class;
 using System.Windows.Forms;
 using System.Runtime.InteropServices.ComTypes;
 using System.Timers;
+using System.Windows.Media;
 
 namespace VideoPlayer
 {
@@ -32,12 +33,12 @@ namespace VideoPlayer
             if (principal.IsInRole(System.Security.Principal.WindowsBuiltInRole.Administrator))
             {
                 //如果是管理员，则直接运行
-                Player py = new Player();
-                py.Show();
-                //VedioPlayer.Form1 form = new VedioPlayer.Form1();
+                 Player py = new Player();
+                 py.Show();
+               // MediaPlayer.Form1 form = new VedioPlayer.Form1();
                 //form.Show();
                 //ShowChange sc = new ShowChange();
-                //sc.Show();
+                //sc.Show();           
                 //启动一个线程来实时更新摇杆所反馈的数据 
                 //System.Timers.Timer timer = new System.Timers.Timer();
                 //timer.Enabled = true;
@@ -45,7 +46,6 @@ namespace VideoPlayer
                 //设置是否重复计时，如果该属性设为False,则只执行timer_Elapsed方法一次。
                 //timer.AutoReset = true;
                 //timer.Elapsed += new ElapsedEventHandler(timer_USBJOY_DLL);
-
             }
             else
             {
@@ -73,7 +73,7 @@ namespace VideoPlayer
             Console.Clear();
             //第一个参数为Dll包含方法的名称，第二个参数为Dll方法里面为数组的大小
             //方法--九座二自由度
-            USBJOY_DLL("SQ_GET_2DOF_9P", 4); 
+            USBJOY_DLL("SQ_GET_2DOF", 4); 
         }
         private void USBJOY_DLL(string funcname, int k)
         {
@@ -88,7 +88,7 @@ namespace VideoPlayer
             byte[] a = new byte[k];
             addFunction(ref a[0]);
             for (int i=0;i<a.Length;i++) {
-            Console.WriteLine(a[i]);
+            Console.WriteLine(i+":"+a[i]);
             }
             //DllInvoke.FreeLibrary(hModule); //释放Dll文件
         }
