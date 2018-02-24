@@ -128,11 +128,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Class\DllInvoke.cs" />
-    <Compile Include="Class\Hook.cs" />
     <Compile Include="Class\KeyboardHookLib.cs" />
     <Compile Include="Class\SerialPortCom.cs" />
     <Compile Include="Class\UserControlClass.cs" />
-    <Compile Include="Class\Refresh.cs" />
     <Compile Include="Class\DoubleConverter.cs" />
     <Compile Include="Class\ImageInfo.cs" />
     <Compile Include="ShowChange.xaml.cs">
@@ -140,9 +138,6 @@
     </Compile>
     <Compile Include="UserLogin.xaml.cs">
       <DependentUpon>UserLogin.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="RemoveImage.xaml.cs">
-      <DependentUpon>RemoveImage.xaml</DependentUpon>
     </Compile>
     <Compile Include="SecondScreen.xaml.cs">
       <DependentUpon>SecondScreen.xaml</DependentUpon>
@@ -209,10 +204,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Player.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="RemoveImage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

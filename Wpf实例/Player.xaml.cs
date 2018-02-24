@@ -81,7 +81,6 @@ namespace VideoPlayer
         /// </summary>
         inkCameraPlay
     }
-
     /// <summary>
     /// Player.xaml 的交互逻辑
     /// </summary>
@@ -665,19 +664,19 @@ namespace VideoPlayer
         //{
         //    if (e.LeftButton == MouseButtonState.Pressed)
         //    {
-        //        if (string.IsNullOrEmpty(  UserControlClass.FileName))
+        //        if (string.IsNullOrEmpty(UserControlClass.FileName))
         //        {
         //            return;
         //        }
-        //        else if (  UserControlClass.FileName.Contains(".swf"))
+        //        else if (UserControlClass.FileName.Contains(".swf"))
         //        {
         //            //PlayerCommon.SaveFlashImage( FlashShock);
         //        }
-        //        else if (  UserControlClass.FileName == "Camera")
+        //        else if (UserControlClass.FileName == "Camera")
         //        {
         //            PlayerCommon.SaveCameraImage(UserControlClass.sc2);
         //        }
-        //        else if (  UserControlClass.MPPlayer.HasVideo)
+        //        else if (UserControlClass.MPPlayer.HasVideo)
         //        {
         //            PlayerCommon.SaveVideoImage(UserControlClass.sc2);
         //        }
@@ -707,7 +706,7 @@ namespace VideoPlayer
         //        //Camera camera = new Camera(this);
         //          UserControlClass.MPPlayer.Pause();
         //          UserControlClass.MSStatus = MediaStatus.Pause;
-        //        ChangeShowPlay();
+        //          ChangeShowPlay();
         //        //camera.ShowDialog();
         //    }
         //}
@@ -1029,12 +1028,6 @@ namespace VideoPlayer
             System.Windows.Controls.MenuItem itemDelete;
             System.Windows.Controls.ContextMenu contextMenu = new System.Windows.Controls.ContextMenu();
 
-            //itemDelete = new System.Windows.Controls.MenuItem();
-            //itemDelete.Tag = "ListPlay";
-            //itemDelete.Header = "记 忆 播 放";
-            //itemDelete.Click += new RoutedEventHandler(itemDelete_Click);
-            //contextMenu.Items.Add(itemDelete);
-
             itemDelete = new System.Windows.Controls.MenuItem();
             itemDelete.Tag = "Delete";
             itemDelete.Header = "  删   除  ";
@@ -1069,7 +1062,6 @@ namespace VideoPlayer
             menuitem.Header = "添 加 图 片";
             menuitem.Click += new RoutedEventHandler(LVitemDelete_Click);
             contextMenu.Items.Add(menuitem);
-
 
             menuitem = new System.Windows.Controls.MenuItem();
             menuitem.Tag = "Delete";
@@ -2310,15 +2302,6 @@ namespace VideoPlayer
                 //
                 if (UserControlClass.FileName != null) {
                     ListView.SelectedValue = UserControlClass.FileName;
-                    //for (int i = 0; i < ListView.Items.Count; i++)
-                    //{
-                    //    if (ListView.Items[i].ToString() == UserControlClass.FileName)
-                    //    {
-                    //        lv.SelectedItem = ListView.Items[i];
-
-                    //        System.Windows.MessageBox.Show(UserControlClass.FileName);
-                    //    }
-                    //}
                 }
             }
         }
@@ -2493,57 +2476,7 @@ namespace VideoPlayer
                 this.Top = (screen.WorkingArea.Height - this.Height) / 2;
             }
         }
-        #region
-        ///// <summary>
-        ///// 点击删除图片的图片‘-’
-        ///// </summary>
-        ///// <param name="sender"></param>
-        ///// <param name="e"></param>
-        //private void ImgDel_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        //{
-        //    RemoveImage rm = new RemoveImage(this);
-        //    rm.ShowDialog();
-        //}
-        /// <summary>
-        /// 播放列表选项变换
-        /// </summary>
-        /// <param name = "sender" ></ param >
-        /// < param name="e"></param>
-        //private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        //{
-        //    if (ListView.SelectedItem != null)
-        //    {
-        //        string name = ListView.SelectedItem.ToString();
-        //        创建打开xml文件的流
-        //        FileInfo fileInfo = new FileInfo(AppDomain.CurrentDomain.BaseDirectory.Substring(0, AppDomain.CurrentDomain.BaseDirectory.Length - 11) + @"\XML\" + "List.xml");
-        //        if (fileInfo.Exists)//判断文件是否存在
-        //        {
-        //            XmlDocument xmlDoc = new XmlDocument();
-        //            加载路径的xml文件
-        //            xmlDoc.Load(AppDomain.CurrentDomain.BaseDirectory.Substring(0, AppDomain.CurrentDomain.BaseDirectory.Length - 11) + @"\XML\" + "List.xml");
-        //            XmlNode xmlNode = xmlDoc.SelectSingleNode("Lists");
-        //            string lists = xmlNode.InnerText;
-        //            if (!string.IsNullOrEmpty(lists))
-        //            {
-        //                string path = null;
-        //                XmlNodeList nodes = xmlNode.SelectNodes("List");
-        //                foreach (XmlNode node in nodes)
-        //                {
-        //                    XmlElement element = (XmlElement)node;
-        //                    if (name.Equals(element["Name"].InnerText))
-        //                    {
-        //                        path = element["Path"].InnerText;
-        //                    }
-        //                }
-        //                if (path != null)
-        //                {
-        //                        JudgeSameName(path);
-        //                }
-        //            }
-        //        }
-        //    }
-        //}
-        #endregion
+       
         /// <summary>
         /// 验证同级目录下有没有和视频文件名称相同的图片，如果有就添加图片
         /// </summary>
@@ -2648,7 +2581,7 @@ namespace VideoPlayer
         private void lv_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             int index = lv.SelectedIndex;
-           
+
             if (index > -1) {
                 string imagepath = data[lv.SelectedIndex].Filepath;
                 string filename = Path.GetFileNameWithoutExtension(imagepath);
@@ -2665,7 +2598,6 @@ namespace VideoPlayer
                     {
                         // ListView.Focus();
                         ListView.SelectedValue = item.ToString();
-
                     }
                 }
             }
@@ -2739,16 +2671,6 @@ namespace VideoPlayer
             {
                 handle = true;
             }
-            //如果键A~Z   
-            //if (hookStruct.vkCode >= (int)Keys.A && hookStruct.vkCode <= (int)Keys.Z)
-            //{
-            //    //挡掉B键   
-            //    if (hookStruct.vkCode == (int)Keys.B) 
-            //    hookStruct.vkCode = (int)Keys.None; //设键为0   
-            //    handle = true;
-            //}
-            //Keys key = (Keys)hookStruct.vkCode;
-            //textBox.Text= "你按下:" + (key == Keys.None ? "" : key.ToString());
         }
 
         /// <summary>
